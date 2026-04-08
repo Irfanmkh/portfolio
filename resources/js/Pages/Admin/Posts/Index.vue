@@ -3,16 +3,16 @@
 
 		<Head title="Posts" />
 
-		<SectionHeader section="Posts" title="Blog records" description="Manage draft and published posts for the blog section.">
+		<SectionHeader section="Posts" title="Blog records" description="Manage Draft and published posts for the blog section.">
 			<template #actions>
-					<Link href="/admin/content" class="inline-flex items-center gap-2 rounded-xl border border-white/10 px-4 py-2 text-sm text-slate-200 transition hover:bg-white/5">
-						<IconArrowLeft class="h-4 w-4" />
-						<span>Content hub</span>
-					</Link>
-					<Link href="/admin/posts/create" class="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-amber-300">
-						<IconPlus class="h-4 w-4" />
-						<span>New post</span>
-					</Link>
+				<Link href="/admin/content" class="inline-flex items-center gap-2 rounded-xl border border-white/10 px-4 py-2 text-sm text-slate-200 transition hover:bg-white/5">
+					<IconArrowLeft class="h-4 w-4" />
+					<span>Content hub</span>
+				</Link>
+				<Link href="/admin/posts/create" class="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-amber-300">
+					<IconPlus class="h-4 w-4" />
+					<span>New post</span>
+				</Link>
 			</template>
 
 			<form class="mt-6 grid gap-4 xl:grid-cols-[2fr_1fr_1fr_auto]" @submit.prevent="applyFilters">
@@ -60,12 +60,7 @@
 							<td class="px-4 py-3 text-slate-300">{{ post.status }}</td>
 							<td class="px-4 py-3 text-slate-300">{{ post.published_at || '—' }}</td>
 							<td class="px-4 py-3 text-slate-500">
-								<a
-									:href="postSlugUrl(post)"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="inline-flex max-w-full items-center gap-2 rounded-lg border border-white/10 px-2 py-1 text-amber-300 transition hover:border-amber-400/30 hover:bg-amber-400/10 hover:text-amber-200"
-								>
+								<a :href="postSlugUrl(post)" target="_blank" rel="noopener noreferrer" class="inline-flex max-w-full items-center gap-2 rounded-lg border border-white/10 px-2 py-1 text-amber-300 transition hover:border-amber-400/30 hover:bg-amber-400/10 hover:text-amber-200">
 									<span class="truncate">{{ post.slug }}</span>
 								</a>
 							</td>

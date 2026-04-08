@@ -37,8 +37,8 @@
                     </div>
 
                     <SelectField v-model="form.status" label="Status" :error="form.errors.status">
-                        <option value="completed">Completed</option>
-                        <option value="ongoing">Ongoing</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Ongoing">Ongoing</option>
                     </SelectField>
                 </div>
             </div>
@@ -128,7 +128,7 @@ const form = useForm({
     made_at: props.project.made_at ?? '',
     description: props.project.description ?? '',
     link: props.project.link ?? '',
-    status: props.project.status ?? 'completed',
+    status: props.project.status ?? 'Completed',
     thumbnail: null,
     thumbnail_remove: false,
     gallery_files: [],

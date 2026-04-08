@@ -24,8 +24,8 @@
 						</div>
 
 						<SelectField v-model="form.status" label="Status" :error="form.errors.status">
-							<option value="draft">Draft</option>
-							<option value="published">Published</option>
+							<option value="Draft">Draft</option>
+							<option value="Published">Published</option>
 						</SelectField>
 					</div>
 
@@ -84,7 +84,7 @@ const form = useForm({
 	slug: props.post.slug ?? '',
 	content: props.post.content ?? '',
 	type: props.post.type ?? 'post',
-	status: props.post.status ?? 'draft',
+	status: props.post.status ?? 'Draft',
 	cover_image: null,
 	published_at: props.post.published_at ?? '',
 });

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->json('technologies')->nullable();
             $table->json('features')->nullable();
             $table->json('results')->nullable();
-            $table->enum('status', ['Ongoing', 'Completed'])->default('completed');
+            $table->enum('status', ['Ongoing', 'Completed'])->default('Completed');
             $table->timestamps();
         });
     }

@@ -28,7 +28,7 @@ class PostRequest extends FormRequest
             'slug' => ['required', 'string', 'max:255', $slugRule],
             'content' => ['nullable', 'string'],
             'type' => ['nullable', 'string', 'max:255'],
-            'status' => ['required', 'in:draft,published'],
+            'status' => ['required', 'in:Draft,Published'],
             'cover_image' => ['nullable', 'image', 'max:4096'],
             'published_at' => ['nullable', 'date'],
         ];

@@ -42,7 +42,7 @@ class ProjectRequest extends FormRequest
             'features.*' => ['nullable', 'string', 'max:255'],
             'results' => ['nullable', 'array'],
             'results.*' => ['nullable', 'string', 'max:255'],
-            'status' => ['required', 'in:ongoing,completed'],
+            'status' => ['required', 'in:Ongoing,Completed'],
         ];
     }
 }

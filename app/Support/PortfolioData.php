@@ -389,7 +389,7 @@ final class PortfolioData
 			'made_at' => '',
 			'description' => '',
 			'link' => '',
-			'status' => 'completed',
+			'status' => 'Completed',
 			'thumbnail' => null,
 			'thumbnail_url' => null,
 			'gallery' => [],
@@ -436,7 +436,7 @@ final class PortfolioData
 			'slug' => '',
 			'content' => '',
 			'type' => 'post',
-			'status' => 'draft',
+			'status' => 'Draft',
 			'cover_image_url' => null,
 			'published_at' => '',
 		];

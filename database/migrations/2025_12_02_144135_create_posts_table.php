@@ -17,7 +17,7 @@ return new class extends Migration
 
             $table->string('type')->default('post');
             $table->enum('status', ['Draft', 'Published'])
-                ->default('draft');
+                ->default('Draft');
             $table->string('cover_image')->nullable();
             $table->timestamp('published_at')->nullable();
             $table->timestamps();

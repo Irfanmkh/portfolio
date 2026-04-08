@@ -27,7 +27,7 @@ class PostController extends Controller
 						->orWhere('content', 'like', '%' . $search . '%');
 				});
 			})
-			->when(in_array($status, ['draft', 'published'], true), fn ($query) => $query->where('status', $status))
+			->when(in_array($status, ['Draft', 'Published'], true), fn ($query) => $query->where('status', $status))
 			->when($type !== 'all' && $type !== '', fn ($query) => $query->where('type', $type));
 
 		$posts = $postsQuery
@@ -46,7 +46,7 @@ class PostController extends Controller
 				'type' => $type,
 			],
 			'filterOptions' => [
-				'statuses' => ['all', 'draft', 'published'],
+				'statuses' => ['all', 'Draft', 'published'],
 				'types' => Post::query()
 					->select('type')
 					->distinct()

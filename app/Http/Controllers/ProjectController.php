@@ -29,7 +29,7 @@ class ProjectController extends Controller
 						->orWhere('link', 'like', '%' . $search . '%');
 				});
 			})
-			->when(in_array($status, ['ongoing', 'completed'], true), fn ($query) => $query->where('status', $status))
+			->when(in_array($status, ['Ongoing', 'Completed'], true), fn ($query) => $query->where('status', $status))
 			->when($year !== '', fn ($query) => $query->where('year', (int) $year));
 
 		$projects = $projectsQuery
@@ -47,7 +47,7 @@ class ProjectController extends Controller
 				'year' => $year,
 			],
 			'filterOptions' => [
-				'statuses' => ['all', 'ongoing', 'completed'],
+				'statuses' => ['all', 'Ongoing', 'Completed'],
 				'years' => Project::query()
 					->whereNotNull('year')
 					->select('year')
