@@ -1,5 +1,9 @@
 *.log
+
+.npm-cache/
+
 *:Zone.Identifier
+
 .DS_Store
 .npm-cache/
 .env
