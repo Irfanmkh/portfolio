@@ -1,5 +1,7 @@
 *.log
+*:Zone.Identifier
 .DS_Store
+.npm-cache/
 .env
 .env.backup
 .env.production
